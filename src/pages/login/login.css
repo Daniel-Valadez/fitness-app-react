@@ -87,4 +87,5 @@ button {
   place-self: end; 
   color: #ffffff; 
   margin-top: -2rem; 
+  width: fit-content
 }

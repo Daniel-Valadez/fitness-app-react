@@ -17,21 +17,21 @@ const SignUpModal = ({closeModal, registerUser}) => {
         <form className="signupForm" onSubmit={registerUser}>
           <LoginInput
             type="text"
-            label="New Password; "
+            label="NewUsername"
             onChangeHandler={() => {}}
             value={newUsername}
           /> 
 
           <LoginInput
             type="password"
-            label="New Password"
+            label="NewPassword"
             onChangeHandler={() => {}}
             value={newPassword}
           /> 
 
           <LoginInput
             type="text"
-            label="Retype Password"
+            label="RetypePassword"
             onChangeHandler={() => {}}
             value={retypePassword}
           /> 
