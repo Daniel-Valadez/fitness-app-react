@@ -1,0 +1,67 @@
+button {
+  height: 2.25rem; 
+  font-weight: bold;
+  border: 1px solid; 
+  color: #ffffff; 
+  border-radius: 4px; 
+  width: 7rem; 
+  transition: all 0.2s; 
+}
+
+.modalBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2; 
+  background: linear-gradient(to bottom, transparent 0%, black 100%);
+}
+
+.modalCard {
+  background: rgb(2,0,36);
+  background: linear-gradient(165deg, rgba(2,0,36,1) 0%, rgba(2,48,71,1) 59%, rgba(251,133,0,1) 100%);
+  height: fit-content; 
+  position: absolute; 
+  top: -35%; 
+  right: 0; 
+  bottom: 0; 
+  left: 0; 
+  margin: auto; 
+  z-index: 3; 
+  max-width: 20rem;
+  border: 1px solid #020024; 
+  border-radius: 4px; 
+  padding: 1rem; 
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.closeButton {
+  background-color: #023047 ;
+  border-color: #023047; 
+}
+
+.registerButton {
+  background-color: #fb8500;
+  border-color: #023047;
+}
+
+.closeButton:hover {
+  background: #ffffff; 
+  color: #023047; 
+}
+
+.registerButton:hover {
+  background: #023047; 
+}
