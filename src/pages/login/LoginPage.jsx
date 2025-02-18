@@ -30,7 +30,7 @@ const LoginPage = () => {
 		setShowSignup(!showSignup);
 	};
 
-	const dispatch = useDispatch(); 
+	const dispatch = useDispatch();
 
 	const validateCredentials = async (event) => {
 		event.preventDefault();
@@ -56,17 +56,16 @@ const LoginPage = () => {
 			console.log("this is the error", error);
 		} finally {
 			console.log("finally");
-		} */ 
+		} */
 
-	  dispatch(logIn({
-			email: username, 
-			password: password, 
-			fullName: username, 
-		})) 
+		dispatch(
+			logIn({
+				email: username,
+				password: password,
+				fullName: username,
+			})
+		);
 	};
-
-	/* const submitForm = () => {
-  }*/
 
 	return (
 		<div className="loginPage">
@@ -108,7 +107,7 @@ const LoginPage = () => {
 					</button>
 				</form>
 
-				<Carousel /> 
+				<Carousel />
 			</div>
 
 			{showSignup ? (

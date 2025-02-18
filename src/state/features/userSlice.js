@@ -15,13 +15,13 @@ export const userSlice = createSlice({
     logIn: (state, action) => {
       //This takes the keys from the response in the log in 
       //api and sets them to our user state. 
-      console.log("This is the current state", state); 
+      //console.log("This is the current state", state); 
       for(const key in action.payload) {
         state[key] = action.payload[key]; 
       }
 
       state.loggedIn = true; 
-      console.log("The user has been logged in!", state); 
+      //console.log("The user has been logged in!", state); 
     }, 
 
 
