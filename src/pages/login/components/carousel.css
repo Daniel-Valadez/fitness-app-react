@@ -1,0 +1,55 @@
+.carousel {
+  background: #fb8500; 
+  width: 30rem; 
+}
+
+button {
+  height: 2rem; 
+  border: 1px solid; 
+}
+
+.leftButton {
+  background: #8ecae6; 
+  border-color: #8ecae6; 
+  transition: all 0.2s;
+}
+
+.leftButton:hover {
+  background: #023047; ;
+}
+
+.leftButton svg {
+  color: #023047;
+  height: 1.5rem; 
+  transition: all 0.2s;
+}
+
+.leftButton:hover svg {
+  color: #8ecae6
+}
+
+.rightButton {
+  background: #023047; 
+  border-color: #023047; 
+  transition: all 0.2s; 
+}
+
+.rightButton:hover {
+  background: #8ecae6; 
+}
+
+.rightButton svg {
+  height: 1.5rem; 
+  color: #8ecae6; 
+  transition: all 0.2s;
+}
+
+.rightButton:hover svg {
+  color: #023047; 
+}
+
+@media only screen and (max-width: 880px) {
+  .carousel {
+    width: 100%; 
+  }
+}
