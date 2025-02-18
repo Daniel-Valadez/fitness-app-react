@@ -8,13 +8,18 @@ import "./App.css";
 
 import LoginPage from "./pages/login/LoginPage";
 
-//This allows us to import font awesome icons and reference them 
+//This allows us to import font awesome icons and reference them
 //globally rather than having to import them over and over again in
-//each component individually. 
+//each component individually.
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faHeartPulse } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faHeartPulse);
+import {
+	faHeartPulse,
+	faArrowLeft,
+	faArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faHeartPulse, faArrowLeft, faArrowRight);
 
 //This line creates the router.
 const router = createBrowserRouter(

@@ -27,8 +27,8 @@ button {
 
 .loginHeader {
   display: grid; 
-  grid-auto-flow: column; 
-  gap: 1.5rem; 
+  grid-template-columns: 0.1fr 1fr; ;
+  gap: 0.75rem; 
   align-items: center;
   filter: drop-shadow(0 0 0.75rem #ffffff);
 }
@@ -41,6 +41,13 @@ button {
 .loginHeader svg {
   height: 2.25rem; 
   color: #ffffff; 
+}
+
+.loginPageInner {
+  display: grid;
+  grid-auto-flow: column; 
+  gap: 5rem ;
+  margin-top: 3rem; 
 }
 
 .userCredentials {
@@ -88,4 +95,16 @@ button {
   color: #ffffff; 
   margin-top: -2rem; 
   width: fit-content
+}
+
+@media only screen and (max-width: 880px) {
+  .loginPageInner {
+    grid-auto-flow: row;
+    gap: 2.5rem; 
+    justify-content: center;
+  }
+
+  .userCredentials {
+    place-self: center; 
+  }
 }
