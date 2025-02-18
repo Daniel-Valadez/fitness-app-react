@@ -4,6 +4,7 @@ import "./login.css";
 
 //Functional Components
 import LoginInput from "../../components/loginInput";
+import Carousel from "./components/Carousel";
 
 //Modals
 import SignUpModal from "../../components/modals/signup/SignUpModal";
@@ -28,11 +29,20 @@ const LoginPage = () => {
 	const validateCredentials = async (event) => {
 		event.preventDefault();
 		try {
-			let url = `/api/users?username=${username}&password=${password}`;
-			const response = await fetch(url);
+			let url = `/login`;
+			//const response = await fetch(url);
+			const response = await fetch(url, {
+				method: "POST", 
+				headers: {"Content-Type": "application/json"}, 
+				body: JSON.stringify({
+					email: username, 
+					password: password, 
+				})
+			})
+
 			const data = await response.json();
 
-			console.log("This is the data");
+			console.log("This is the data", data);
 		} catch (error) {
 			console.log("this is the error", error);
 		} finally {
@@ -82,6 +92,8 @@ const LoginPage = () => {
 						Create Account
 					</button>
 				</form>
+
+				<Carousel /> 
 			</div>
 
 			{showSignup ? (
