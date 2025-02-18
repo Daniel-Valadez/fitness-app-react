@@ -9,6 +9,10 @@ import Carousel from "./components/Carousel";
 //Modals
 import SignUpModal from "../../components/modals/signup/SignUpModal";
 
+//Store
+import { logIn } from "../../state/features/userSlice";
+import { useDispatch } from "react-redux";
+
 const LoginPage = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
@@ -26,10 +30,12 @@ const LoginPage = () => {
 		setShowSignup(!showSignup);
 	};
 
+	const dispatch = useDispatch(); 
+
 	const validateCredentials = async (event) => {
 		event.preventDefault();
-		try {
-			let url = `/login`;
+		/* try {
+			let url = `/api/users`;
 			//const response = await fetch(url);
 			const response = await fetch(url, {
 				method: "POST", 
@@ -43,11 +49,20 @@ const LoginPage = () => {
 			const data = await response.json();
 
 			console.log("This is the data", data);
+
+			//This is where I should call the login reducer. 
+
 		} catch (error) {
 			console.log("this is the error", error);
 		} finally {
 			console.log("finally");
-		}
+		} */ 
+
+	  dispatch(logIn({
+			email: username, 
+			password: password, 
+			fullName: username, 
+		})) 
 	};
 
 	/* const submitForm = () => {

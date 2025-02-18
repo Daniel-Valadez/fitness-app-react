@@ -8,6 +8,7 @@ const SignUpModal = ({ closeModal, registerUser }) => {
 	const [newUsername, setNewUsername] = useState("");
 	const [newPassword, setNewPassword] = useState("");
 	const [retypePassword, setRetypePassword] = useState("");
+	const [fullName, setFullName] = useState(""); 
 
   const enableSubmission = () => {
     console.log("This has changed", retypePassword !== newPassword && newPassword.length > 0); 
@@ -26,13 +27,14 @@ const SignUpModal = ({ closeModal, registerUser }) => {
 				body: JSON.stringify({
 					email: newUsername,
 					password: newPassword,
+					fullName: fullName, 
 				}),
 			})
 				.then((res) => res.json())
 				.then((data) => console.log(data));
 		} catch (error) {
 			console.log("This is an error", error);
-		}
+		} 
 	};
 
 	return (
