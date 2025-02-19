@@ -1,14 +1,4 @@
-/* import {
-	Route,
-	RouterProvider,
-	createBrowserRouter,
-	createRoutesFromElements,
-	Navigate,
-	Router, 
-	Routes, 
-} from "react-router-dom"; */ 
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import LoginPage from "./pages/login/LoginPage";
@@ -29,38 +19,17 @@ import {
 
 library.add(faHeartPulse, faArrowLeft, faArrowRight);
 
-//import {}
-
-//This line creates the router.
-/* const router = createBrowserRouter(
-	//This creates a route from a provided component.
-	createRoutesFromElements(
-		<>
-			<Route index element={<LoginPage />} />
-		</>
-	)
-);
-
-function App() {
-	return (
-		<>
-			<RouterProvider router={router} />
-		</>
-	);
-} */ 
-
 function App() {
 	return (
 		<Router>
 			<Routes>
-				<Route path="/login" element={<LoginPage />} /> 
-				
+				<Route path="/login" element={<LoginPage />} />
 				<Route element={<PrivateRoutes />}>
-					<Route index path="/" element={<HomePage />} /> 
+					<Route index path="/" element={<HomePage />} />
 				</Route>
 			</Routes>
 		</Router>
-	)
+	);
 }
 
 export default App;
