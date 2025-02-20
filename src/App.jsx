@@ -1,12 +1,13 @@
-import {
-	Route,
-	RouterProvider,
-	createBrowserRouter,
-	createRoutesFromElements,
-} from "react-router-dom";
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css"; 
 
 import LoginPage from "./pages/login/LoginPage";
+import HomePage from "./pages/home/HomePage";
+import CreateWorkout from "./pages/create/CreateWorkout"; 
+import BlogPage from "./pages/blog/BlogPage"; 
+import SettingsPage from "./pages/settingsPage/SettingsPage"; 
+
+import PrivateRoutes from "./utils/PrivateRoutes";
 
 //This allows us to import font awesome icons and reference them
 //globally rather than having to import them over and over again in
@@ -21,17 +22,19 @@ import {
 
 library.add(faHeartPulse, faArrowLeft, faArrowRight);
 
-//This line creates the router.
-const router = createBrowserRouter(
-	//This creates a route from a provided component.
-	createRoutesFromElements(<Route index element={<LoginPage />} />)
-);
-
 function App() {
 	return (
-		<>
-			<RouterProvider router={router} />
-		</>
+		<Router>
+			<Routes>
+				<Route path="/login" element={<LoginPage />} />
+				<Route element={<PrivateRoutes />}>
+					<Route index path="/" element={<HomePage />} />
+					<Route path="/create-workout" element={<CreateWorkout />} /> 
+					<Route path="/blog" element={<BlogPage />} /> 
+					<Route path="/settings" element={<SettingsPage />} /> 
+				</Route>
+			</Routes>
+		</Router>
 	);
 }
 

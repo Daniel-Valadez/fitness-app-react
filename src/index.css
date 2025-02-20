@@ -1,5 +1,14 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /*font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/ 
+  font-family: Helvetica, Arial, sans-serif;
+  --componentWidth: 80%; 
+  --darkModeBackground: #023047; 
+  --darkComponentBackground: #1e1f21; 
+  --componentBorderRadius: 12px; 
+}
+
+#root {
+  width: 80%; 
 }
 
 body {
@@ -8,7 +17,8 @@ body {
   /* place-items: center; */ 
   min-width: 320px;
   min-height: 100vh;
-  background-color: #023047;
+  background-color: var(--darkModeBackground);
+  padding: 2rem 0; 
 
   justify-content: center;
 }
