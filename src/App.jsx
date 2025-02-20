@@ -1,8 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
+import "./App.css"; 
 
 import LoginPage from "./pages/login/LoginPage";
 import HomePage from "./pages/home/HomePage";
+import CreateWorkout from "./pages/create/CreateWorkout"; 
+import BlogPage from "./pages/blog/BlogPage"; 
+import SettingsPage from "./pages/settingsPage/SettingsPage"; 
 
 import PrivateRoutes from "./utils/PrivateRoutes";
 
@@ -26,6 +29,9 @@ function App() {
 				<Route path="/login" element={<LoginPage />} />
 				<Route element={<PrivateRoutes />}>
 					<Route index path="/" element={<HomePage />} />
+					<Route path="/create-workout" element={<CreateWorkout />} /> 
+					<Route path="/blog" element={<BlogPage />} /> 
+					<Route path="/settings" element={<SettingsPage />} /> 
 				</Route>
 			</Routes>
 		</Router>

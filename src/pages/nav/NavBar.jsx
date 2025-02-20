@@ -1,4 +1,5 @@
 import React from "react";
+import "./navbar.css"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -19,9 +20,12 @@ const NavBar = () => {
 
 			<nav>
         <Link to="/" className="headerLink">Home</Link> 
-        <Link to="/" className="headerLink">Create</Link> 
-        <Link to="/" className="headerLink">Blog</Link> 
-        <Link to="/" className="headerLink">Settings</Link> 
+				<span className="navBorder" /> 
+        <Link to="/create-workout" className="headerLink">Create</Link> 
+				<span className="navBorder" /> 
+        <Link to="/blog" className="headerLink">Blog</Link> 
+				<span className="navBorder" /> 
+        <Link to="/settings" className="headerLink">Settings</Link> 
       </nav>
 		</header>
 	);

@@ -1,0 +1,52 @@
+header {
+  display: grid; 
+  grid-auto-flow: column; 
+  background: var(--darkComponentBackground);
+  /*width: var(--componentWidth);*/  
+  border-radius: var(--componentBorderRadius);
+}
+
+nav {
+  display: grid; 
+  grid-auto-flow: column;
+  gap: 0.25rem; 
+  align-items: center;
+}
+
+nav a {
+  font-weight: bold;
+  color: #ffffff; 
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.2s; 
+}
+
+nav a:hover {
+  filter: drop-shadow(0 0 0.75rem #ffffff);
+}
+
+.pageHeader {
+  display: grid; 
+  grid-auto-flow: column;
+  justify-content: start;
+  padding-left: 1.5rem; 
+  align-items: center;
+  gap: 1.5rem; 
+}
+
+.pageHeader svg {
+  height: 2rem; 
+  color: #ffffff; 
+}
+
+.pageHeader h1 {
+  color: #ffffff; 
+}
+
+.navBorder {
+  height: 40%; 
+  width: 1px; 
+  background-color: #ffffff;
+  border-radius: 1px;
+}
+
